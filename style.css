@@ -1,0 +1,223 @@
+/* Ajustando o layout geral */
+.tudo {
+    display: flex;
+    flex-direction: column; /* Começar como coluna em telas pequenas */
+    justify-content: center;
+    align-items: center; /* Centraliza o conteúdo horizontalmente */
+    width: 100%;
+    height: 100vh;
+    background-color: #f6f6f6;
+}
+
+.a {
+    margin: 40px;
+}
+body {
+    font-family: "Poppins", sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Seção esquerda (Imagem e texto) */
+.esquerda {
+    flex: 1;
+    background-color: #f9f9f9;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+    width: 100%; /* Ocupa 100% em telas pequenas */
+}
+
+.marketplace img {
+    width: 267.36px;
+    height: auto;
+    margin-bottom: 20px;
+    margin-top: -40px;
+ 
+}
+
+.meio {
+    width: 100%;
+    max-width: 755px;
+    text-align: center;
+}
+
+.meio img {
+    width: 100%;
+    height: auto;
+}
+
+a {
+    text-decoration: none;
+}
+
+/* Seção direita (Formulário de login) */
+.direita {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: rgb(245, 245, 245);
+    width: 100%;
+}
+
+.caixa {
+    width: 100%;
+    max-width: 563px; /* Limita o tamanho máximo da caixa */
+    padding: 40px;
+    background-color: #fff;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    margin: 20px;
+}
+
+/* Título e subtítulo */
+.titosub h1 {
+    font-size: 24px;
+    margin-bottom: 8px;
+}
+
+.titosub p {
+    font-size: 14px;
+    color: #888;
+    margin-bottom: 24px;
+}
+
+/* Campos de entrada */
+.inputs {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 24px;
+}
+
+.inputs .prime, .inputs .segu {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 16px;
+    border-radius: 4px;
+}
+
+.input-container, .senha-container {
+    display: flex;
+    align-items: center;
+    border: 1px solid #ffffff;
+    padding: 10px;
+    background-color: #ffffff;
+    border-radius: 4px;
+}
+
+.oxente {
+    border: none;
+}
+
+.baixo {
+    margin-top: 10px;
+    padding: 10px;
+    border: none;
+    border-radius: 4px;
+    width: 100%;
+}
+
+/* Botão de login */
+.botaun {
+    background-color: rgb(242, 77, 12);
+    color: #fff;
+    border: none;
+    padding: 10px 5px;
+    border-radius: 10px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+}
+
+.botaun button {
+    background: none; 
+    border: none; 
+    color: #fff; 
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.botaun button img {
+    margin-left: 8px;
+}
+
+/* Botão Cadastrar */
+.butaun {
+    background-color: #fff;
+    border: 1px solid rgb(242, 77, 12);
+    color: rgb(242, 77, 12);
+    padding: 10px 5px;
+    border-radius: 10px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+}
+
+.butaun button {
+    background: none;
+    border: none;
+    color: rgb(242, 77, 12);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+}
+
+.butaun button img {
+    margin-left: 8px;
+}
+
+/* Linha de divisão */
+.line {
+    border: 1px solid rgb(194, 194, 194);
+    width: 100%;
+}
+
+.ultimos {
+    margin-top: 100px;
+}
+
+/* Responsividade */
+@media (max-width: 1100px) {
+    .a, .b {
+        display: none;
+    }
+}
+
+@media (min-width: 768px) {
+    .tudo {
+        flex-direction: row; /* Alinha em linha em telas maiores */
+    }
+
+    .esquerda, .direita {
+        width: 50%; /* Divide a tela em 50% */
+    }
+}
+
+@media (max-width: 767px) {
+    .caixa {
+        padding: 20px;
+    }
+
+    .botaun, .butaun {
+        padding: 15px;
+        width: 100%; /* Garante que o botão não ultrapasse o container */
+        max-width: 400px; /* Define um tamanho máximo para o botão */
+        margin: 0 auto; /* Centraliza o botão */
+    }
+
+    p {
+        width: 100%;
+        text-align: left;
+        margin: 0 auto;
+    }
+}
